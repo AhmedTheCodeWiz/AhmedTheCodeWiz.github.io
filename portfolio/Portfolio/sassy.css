@@ -1,0 +1,41 @@
+.webscape .cutlink {
+  position: absolute;
+  display: inline-block;
+  font-size: 50px;
+  font-weight: bold;
+  color: skyblue;
+  left: -7px;
+  top: 0px;
+  font-family: "Amatic SC";
+}
+
+.cutlink {
+  position: absolute;
+  white-space: nowrap;
+}
+.cutlink-inner {
+  clip-path: polygon(0 -20%, 100% -20%, 100% 51%, 0 51%);
+  -webkit-clip-path: polygon(0 -20%, 100% -20%, 100% 51%, 0 51%);
+  display: block;
+}
+.cutlink:before {
+  content: attr(data-content);
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  clip-path: polygon(0 120%, 100% 120%, 100% 50%, 0 50%);
+  -webkit-clip-path: polygon(0 120%, 100% 120%, 100% 50%, 0 50%);
+}
+.cutlink-inner, .cutlink:before {
+  transition: transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.cutlink:hover .cutlink-inner, .cutlink:hover:before {
+  transition: transform 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.cutlink:hover:before {
+  transform: translate(82px, -1px);
+}
+.cutlink:hover .cutlink-inner {
+  transform: translate(0px, -1px);
+}/*# sourceMappingURL=sassy.css.map */

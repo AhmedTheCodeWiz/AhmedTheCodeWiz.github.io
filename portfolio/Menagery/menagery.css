@@ -1,0 +1,9 @@
+body{
+    background-color: #000000;
+}
+#canvas{
+    position: absolute;
+    background-color: #fff;
+    left: 0;
+    top: 0;
+}

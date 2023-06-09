@@ -1,0 +1,523 @@
+@font-face{
+  font-family: 'Kayonest';
+  src: url(fonts/KayonestFreeTrial-vm0wM.ttf);
+}
+@font-face{
+  font-family: 'VCR';
+  src: url(fonts/VCR_OSD_MONO.ttf);
+}
+@font-face{
+  font-family: 'Gideon';
+  src: url(fonts/GideonRoman-Regular.ttf);
+}
+body{
+  background-color: #0d0d0d;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'kayonest';
+    color: white;
+    cursor: crosshair;
+}
+#canvas{
+  width: 100%; /*273, 248 */
+  height: 100%;
+  rotate: (-2.4deg);
+  border-radius: 5% 100% 5% 60%;
+}
+A{
+  color: white;
+  text-decoration: none;
+}
+
+h1{
+  text-align: left;
+  margin-left: 2%;
+  margin-top: 1%;
+  font-size: 50px;
+}
+h3{
+  text-align: left;
+  margin-left: 2%;
+  margin-top: -3%;
+  font-size: 20px;
+  letter-spacing: 0.2px;
+}
+ul{
+  cursor: pointer;
+  margin: 0%;
+  padding: 0%;
+  text-align: left;
+  margin-left: 10px;
+  padding-top: 10px;
+  color: white;
+  font-size: 25px;
+  transform: rotate(2.5deg);
+  list-style: none;
+  line-height: 35px;
+  letter-spacing: 3px;
+}
+#here{
+  margin: 0%;
+  padding: 0%;
+  text-align: left;
+  margin-top: 110px;
+  margin-left: 20px;
+  color: white;
+  font-size: 45px;
+  transform: rotate(-55deg);
+  list-style: none;
+  line-height: 35px;
+  letter-spacing: 3px;
+}
+
+
+.mainFrame {
+  width: 95%;
+	height: 95vh;
+	background-color: transparent;
+	border: 1px solid #fff;
+	padding: 10px;
+	box-sizing: border-box;
+	text-align: center;
+  margin-left: 4%;
+  margin-top: 1%;
+}
+.cartoon { 
+    /* MAIN BODY ------------------------------------------------*/
+    position:absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-52%, -50%);
+    width: 90vmin;
+    height: 90vmin;
+    font-weight: 900;
+  }
+  
+  .cartoon div {
+    position: absolute;
+    box-sizing: border-box;
+  }
+  
+  .b {
+    border: 0.5vmin solid;
+  }
+  
+  .r {
+    border-radius: 100%;
+  }
+  
+  .hb::before,
+  .ha::after {
+    content: "";
+    display: block;
+    position: absolute;
+    box-sizing: border-box;
+  }
+  
+  @keyframes wingTopFlap1 { /*LEFT TOP WING ANIME */
+    0% { transform:  scaleX(0.1) rotate3d(0, 0, 0, 1deg); }
+    100% { transform: rotate(-2.4deg)   rotate3d(0, 1, 0, 10deg); }
+  }
+  
+  @keyframes wingTopFlap2 {
+    0% { transform: scaleX(0) rotate3d(0, 0, 0, 10deg); }
+    100% { transform: scaleX(-1) rotate(-3deg) rotate3d(0, 1, 0, 10deg); }
+  }
+
+  
+  .wing-top {
+    /* LEFT WING ----------*/
+    top: 5%;
+    width: 50%;
+    height: 45%;
+    left: 2.5%;
+    background: #0d0d0d;
+    z-index: 1;
+    border-radius: 5% 100% 5% 60%;
+    transform-origin: right bottom;
+    transform: rotate(-9deg);
+    animation: wingTopFlap1 2s forwards ;
+
+    border-style: solid;
+    border-color: white;
+    color: aqua;
+  }
+  
+  .wing-top::after {
+    width: 120%;
+    height: 90%;
+    border-radius: 50%;
+    transform: rotate(35deg);
+    left: 30%;
+    top: -5%;
+  }
+  
+  .wing-top::before {
+    width: 64%;
+    height: 25%;
+    transform: rotate(0deg);
+    top: 61.5%;
+    border-radius: 50% 50% 40% 60%;
+  }
+  
+  .wing-top ~ .wing-top {
+    left: 2%;
+    transform: scaleX(-1) rotate(-12deg);
+    animation: wingTopFlap2 2s forwards;
+    
+  }
+  .wing-bottom {
+    width: 28%;
+    height: 40%;
+    background: transparent;
+    border-radius: 100% / 125% 125% 10% 100%;
+    transform-origin: right top;
+    transform: rotate(55deg);
+    top: 59%;
+    left: 30.4%;
+    animation: wingBottomFlap1 2s forwards;
+    overflow: hidden;
+    border-style: solid;
+    border-color: white;
+  }
+  
+  .wing-bottom ~ .wing-bottom {
+    transform: scaleX(-1) rotate(55deg);
+    left: auto;
+    right: 53.5%;
+    animation: wingBottomFlap2 2s forwards;
+  }
+  
+  @keyframes wingBottomFlap1 {
+    0% { transform: scaleX(.4) rotate(55deg) rotate3d(0, 0, 0, 10deg); }
+    100% { transform: scaleX(1) rotate(55deg) rotate3d(0, 1, 0, 10deg); }
+    
+  }
+
+  @keyframes wingBottomFlap2 {
+    0% { transform: scaleX(-.3) rotate(55deg) rotate3d(0, 0, 0, 10deg); }
+    100% { transform: scaleX(-1) rotate(55deg) rotate3d(0, 1, 0, 10deg); }
+  }
+
+
+/* ___________________gijec49579__________________-Black wings_____________________carpetra____________*/
+.cartoonNoir{
+  height: 43px;
+  width: 43px;
+  margin-top: 40.8%;
+  margin-left: 0.3%;
+  position: absolute;
+  cursor: pointer;
+  animation: wingTopFlutter1 2s linear infinite;
+  
+}
+
+.cartoonNoir div {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.wing-top-noir {
+  top: 5%;
+  width: 50%;
+  height: 45%;
+  left: 2.5%;
+  background: #0d0d0d;
+  border-style: solid;
+  border-color: white;
+  border-width: 1px;
+  border-radius: 5% 100% 5% 60%;
+  transform-origin: right bottom;
+  transform: rotate(-12deg);
+  overflow: hidden;
+  animation: wingTopFlap1 2s forwards ;
+
+  
+}
+.wing-top-noir::after {
+  width: 120%;
+  height: 90%;
+  border-radius: 50%;
+  transform: rotate(35deg);
+  left: 30%;
+  top: -5%;
+
+}
+
+.wing-top-noir::before {
+  width: 64%;
+  height: 25%;
+  transform: rotate(0deg);
+  top: 61.5%;
+  border-radius: 50% 50% 40% 60%;
+}
+
+.wing-top-noir ~ .wing-top-noir {
+  left: 0;
+  transform: scaleX(-1) rotate(-12deg);
+  animation: wingTopFlap2 2s forwards;
+
+  
+}
+.wing-bottom-noir {
+  width: 28%;
+  height: 40%;
+  background: #0d0d0d;
+  border-style: solid;
+  border-color: white;
+  border-width: 1px;
+  border-radius: 100% / 125% 125% 10% 100%;
+  transform-origin: right top;
+  transform: rotate(55deg);
+  top: 59%;
+  left: 31%;
+  animation: wingBottomFlap1 2s forwards;
+  overflow: hidden;
+  
+}
+
+.wing-bottom-noir ~ .wing-bottom-noir {
+  transform: scaleX(-1) rotate(55deg);
+  left: auto;
+  right: 55.5%;
+  animation: wingBottomFlap2 2s forwards;
+}
+
+/* WHITE THEME_____________________________________________________________________________________________*/
+
+.cartoonWhite{
+  height: 43px;
+  width: 43px;
+  margin-top: 30.8%;
+  margin-left: 0.3%;
+  position: absolute;
+  cursor: pointer;
+
+}
+
+.cartoonWhite div {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.wing-top-white {
+  top: 5%;
+  width: 50%;
+  height: 45%;
+  left: 2.5%;
+  background-color: white;
+  border-style: solid;
+  border-color: #0d0d0d;
+  border-width: 1px;
+  border-radius: 5% 100% 5% 60%;
+  transform-origin: right bottom;
+  transform: rotate(-12deg);
+  overflow: hidden;
+  animation: wingTopFlap1 2s forwards;
+  animation: wingTopFlutter 2s linear infinite;
+  
+}
+.wing-top-white::after {
+  width: 120%;
+  height: 90%;
+  border-radius: 50%;
+  transform: rotate(35deg);
+  left: 30%;
+  top: -5%;
+
+}
+
+.wing-top-white::before {
+  width: 64%;
+  height: 25%;
+  transform: rotate(0deg);
+  top: 61.5%;
+  border-radius: 50% 50% 40% 60%;
+}
+
+.wing-top-white ~ .wing-top-white  {
+  left: 0;
+  transform: scaleX(-1) rotate(-12deg);
+  animation: wingTopFlap2 2s forwards;
+  
+}
+.wing-bottom-white  {
+  width: 28%;
+  height: 40%;
+  background-color: white;
+  border-style: solid;
+  border-color: #0d0d0d;
+  border-width: 1px;
+  border-radius: 100% / 125% 125% 10% 100%;
+  transform-origin: right top;
+  transform: rotate(55deg);
+  top: 59%;
+  left: 31%;
+  animation: wingBottomFlap1 2s forwards;
+  overflow: hidden;
+}
+
+.wing-bottom-white  ~ .wing-bottom-white  {
+  transform: scaleX(-1) rotate(55deg);
+  left: auto;
+  right: 55.5%;
+  animation: wingBottomFlap2 2s forwards;
+  
+}
+
+/*_______________________________--TERMINIAL_-----------__________________________________*/
+.cartoonTerminal{
+  height: 43px;
+  width: 43px;
+  margin-top: 20.8%;
+  margin-left: 0.3%;
+  position: absolute;
+  cursor: pointer;
+
+}
+
+.cartoonTerminal div {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.wing-top-terminal {
+  top: 5%;
+  width: 50%;
+  height: 45%;
+  left: 2.5%;
+  background: #0d0d0d;
+  border-style: solid;
+  border-color: #20C20E;
+  border-width: 1px;
+  border-radius: 5% 100% 5% 60%;
+  transform-origin: right bottom;
+  transform: rotate(-12deg);
+  overflow: hidden;
+  animation: wingTopFlap1 2s forwards;
+  
+}
+.wing-top-terminal::after {
+  width: 120%;
+  height: 90%;
+  border-radius: 50%;
+  transform: rotate(35deg);
+  left: 30%;
+  top: -5%;
+
+}
+
+.wing-top-terminal::before {
+  width: 64%;
+  height: 25%;
+  transform: rotate(0deg);
+  top: 61.5%;
+  border-radius: 50% 50% 40% 60%;
+}
+
+.wing-top-terminal ~ .wing-top-terminal  {
+  left: 0;
+  transform: scaleX(-1) rotate(-12deg);
+  animation: wingTopFlap2 2s forwards;
+  
+
+  
+}
+.wing-bottom-terminal  {
+  width: 28%;
+  height: 40%;
+  background: #0d0d0d;
+  border-style: solid;
+  border-color: #20C20E;
+  border-width: 1px;
+  border-radius: 100% / 125% 125% 10% 100%;
+  transform-origin: right top;
+  transform: rotate(55deg);
+  top: 59%;
+  left: 31%;
+  animation: wingBottomFlap1 2s forwards;
+  overflow: hidden;
+}
+
+.wing-bottom-terminal  ~ .wing-bottom-terminal  {
+  transform: scaleX(-1) rotate(55deg);
+  left: auto;
+  right: 55.5%;
+  animation: wingBottomFlap2 2s forwards;
+  
+}
+/*_______________________________--LIFEBLOOD-----------__________________________________*/
+.cartoonLifeBlood{
+  height: 43px;
+  width: 43px;
+  margin-top: 10.8%;
+  margin-left: 0.3%;
+  position: absolute;
+  cursor: pointer;
+
+}
+
+.cartoonLifeBlood div {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.wing-top-lifeBlood {
+  top: 5%;
+  width: 50%;
+  height: 45%;
+  left: 2.5%;
+  background-color: #538eac;
+  border-radius: 5% 100% 5% 60%;
+  transform-origin: right bottom;
+  transform: rotate(-12deg);
+  overflow: hidden;
+  animation: wingTopFlap1 2s forwards;
+  
+}
+.wing-top-lifeBlood::after {
+  width: 120%;
+  height: 90%;
+  border-radius: 50%;
+  transform: rotate(35deg);
+  left: 30%;
+  top: -5%;
+
+}
+
+.wing-top-lifeBlood::before {
+  width: 64%;
+  height: 25%;
+  transform: rotate(0deg);
+  top: 61.5%;
+  border-radius: 50% 50% 40% 60%;
+}
+
+.wing-top-lifeBlood ~ .wing-top-lifeBlood  {
+  left: 0;
+  transform: scaleX(-1) rotate(-12deg);
+  animation: wingTopFlap2 2s forwards;
+  
+}
+.wing-bottom-lifeBlood  {
+  width: 28%;
+  height: 40%;
+  background-color: #538eac;
+  border-radius: 100% / 125% 125% 10% 100%;
+  transform-origin: right top;
+  transform: rotate(55deg);
+  top: 59%;
+  left: 31%;
+  animation: wingBottomFlap1 2s forwards;
+  overflow: hidden;
+}
+
+.wing-bottom-lifeBlood  ~ .wing-bottom-lifeBlood  {
+  transform: scaleX(-1) rotate(55deg);
+  left: auto;
+  right: 55.5%;
+  animation: wingBottomFlap2 2s forwards;
+  
+}
+
